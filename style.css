@@ -1,0 +1,316 @@
+/*CSS Reset*/
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    background-color: #987777;
+}
+/*----------------------------------------------CSS variables-----------------------------------------*/
+:root {
+    --width_all: 50px;
+}
+
+#navbar::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    height: 94px;
+    /*doubt how to make them same (before and navbar*/
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+
+
+
+}
+
+/*-------------------------------------------------navigation bar------------------------------------------------------*/
+
+#navbar {
+    display: flex;
+}
+
+/*---------------logo and image------------*/
+#navbar div {
+    background-color: transparent;
+    position: relative;
+    padding: 20px;
+
+}
+
+#navbar div img {
+    height: 50px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+#navbar div img[title]:hover::after {
+    background-color: red;
+}
+
+
+
+/*------------------list and items------------*/
+.list {
+    display: flex;
+    padding: 36px;
+
+}
+
+.list li {
+    list-style: none;
+    padding: 0px 20px;
+}
+
+.list li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.list li a:hover {
+    text-decoration: none;
+    background-color: rgb(189, 142, 142);
+    /* border: 2px solid white; */
+    border-radius: 10px;
+
+}
+
+/*--------------------------------------------------------------section---------------------------------------------------------*/
+#home::before {
+    content: "";
+    background: url('bg1.jpg') no-repeat center center/cover;
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 400px;
+    width: 100%;
+    z-index: -2;
+    opacity: 0.8;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 300px;
+}
+
+#home h1 {
+    margin: 5px;
+    font-size: 2.8rem;
+    color: white;
+    font-family: 'Caveat', cursive;
+}
+
+#home p {
+    margin: 0px;
+    text-align: center;
+    width: 1000px;
+    color: white;
+    /* text-shadow: 2px 2px black; */
+
+}
+
+#home button {
+    font-size: larger;
+    margin: 10px;
+    background-color: transparent;
+    font-family: 'Permanent Marker', cursive;
+    padding: 5px 20px;
+    width: 150px;
+    border: 2px solid white;
+    color: white;
+    border-radius: 21px;
+    cursor: pointer;
+}
+
+#home button:hover {
+    /* animation-name: btnanim; */
+    /* animation-duration: 1s; */
+    /* animation-fill-mode:forwards; */
+    background-color: #c8a2a26b;
+    cursor: pointer;
+}
+
+@keyframes btnanim {
+    from {
+        width: 150px;
+        height: 50px;
+    }
+
+    to {
+        width: 200px;
+        height: 60px;
+    }
+}
+
+/*----------------------------------------------------------our services--------------------------------------------------------*/
+.service-section-container {
+    display: block;
+}
+
+.service {
+
+    display: flex;
+    flex-direction: column;
+    height: 630px;
+    margin: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.service>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+/*-------- -------------headings and para-----------*/
+.primary {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.8rem;
+}
+
+.secondary-heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+
+}
+
+.serviceitem {
+    margin: 3px 5px;
+    padding: 15px 30px;
+    border: 2px solid brown;
+    background-color: rgb(205, 186, 186);
+    width: 300px;
+    border-radius: 10px;
+}
+
+.serviceitem:hover {
+    transform: translateY(10px);
+    transition-property: #e2b8b8;
+
+    transition: rgb(108, 61, 61) 0.5s ease-in;
+}
+
+.serviceitem h2 {
+    text-align: center;
+    padding: 10px;
+    /* margin: 20px; */
+}
+
+.service-item-container div p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.logo img {
+    height: 100px;
+    width: 100px;
+}
+
+/*----------------------------------client-section-----------------------------------------*/
+#client-section::before {
+    content: "";
+    background: url("bg.jpg");
+    position: absolute;
+    height: 206px;
+    width: 100%;
+    background-color: black;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#client-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+}
+
+.client-item img {
+    height: 110px;
+}
+
+/*---------------------------------------contact us--------------------------------------*/
+#contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#contact h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url("contact.jpg") center center/cover;
+}
+
+/*-------------------form-----------------*/
+#contact div form,
+#contact div form div,#contact-box label,#contact-box input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 15px;
+    font-family: Kdam Thmor Pro, sans-serif;
+    border-radius: 5px;
+}
+
+input,
+textarea {
+    border-radius: 5px;
+}
+
+/*footr------------------*/
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
